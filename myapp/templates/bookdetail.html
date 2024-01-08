@@ -1,0 +1,26 @@
+{%extends 'home.html'%}
+
+{%block body_block%}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<div class="card text-center mt-5">
+  <div class="card-header fw-bold bg-primary-subtle">
+      <i class="fa-solid fa-book" style="color: black;"></i>  ABOUT BOOK
+  </div>
+
+  <div>
+    {%if data.bk_image%}
+      <img src="{{data.bk_image.url}}" alt="" height="200px">
+    {%endif%}
+  </div>
+
+
+  <div class="card-body fw-bold">
+      <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{data.bk_name}}</li>
+          <li class="list-group-item">{{data.bk_author}}</li>
+          <li class="list-group-item">{{data.bk_genre}}</li>
+          <li class="list-group-item">{{data.bk_rate}}</li>
+        </ul>
+  </div>
+</div>
+{%endblock%}
